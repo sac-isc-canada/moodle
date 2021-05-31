@@ -35,6 +35,7 @@ if ($ADMIN->fulltree) {
                                                            RESOURCELIB_DISPLAY_OPEN,
                                                            RESOURCELIB_DISPLAY_NEW,
                                                            RESOURCELIB_DISPLAY_POPUP,
+                                                           RESOURCELIB_DISPLAY_FORCEVIEW,
                                                           ));
     $defaultdisplayoptions = array(RESOURCELIB_DISPLAY_AUTO,
                                    RESOURCELIB_DISPLAY_EMBED,

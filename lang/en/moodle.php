@@ -1740,6 +1740,7 @@ $string['resourcedisplayframe'] = 'In frame';
 $string['resourcedisplaynew'] = 'New window';
 $string['resourcedisplayopen'] = 'Open';
 $string['resourcedisplaypopup'] = 'In pop-up';
+$string['resourcedisplayforceview'] = 'Force view';
 $string['resources'] = 'Resources';
 $string['resources_help'] = 'Resource types enable almost any kind of web content to be inserted into the course.';
 $string['resultsfound'] = '{$a} results found';

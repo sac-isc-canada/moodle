@@ -49,7 +49,8 @@ $string['displayselect_help'] = 'This setting, together with the file type and w
 * Open - Only the file is displayed in the browser window
 * In pop-up - The file is displayed in a new browser window without menus or an address bar
 * In frame - The file is displayed within a frame below the navigation bar and file description
-* New window - The file is displayed in a new browser window with menus and an address bar';
+* New window - The file is displayed in a new browser window with menus and an address bar
+* Force view - The file is displayed after viewing the description';
 $string['displayselect_link'] = 'mod/file/mod';
 $string['displayselectexplain'] = 'Choose display type, unfortunately not all types are suitable for all files.';
 $string['dnduploadresource'] = 'Create file resource';

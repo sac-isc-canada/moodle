@@ -291,7 +291,12 @@ function url_print_workaround($url, $cm, $course) {
     }
 
     echo '<div class="urlworkaround">';
-    print_string('clicktoopen', 'url', "<a href=\"$fullurl\" $extra>$fullurl</a>");
+    // Don't apply auto-linking filters.
+    $filtermanager = filter_manager::instance();
+    $filteroptions = ['originalformat' => FORMAT_HTML, 'noclean' => true];
+    $skipfilters = ['activitynames', 'data', 'glossary', 'sectionnames', 'bookchapters', 'urltolink'];
+    $fullurl = $filtermanager->filter_text($fullurl, context_module::instance($cm->id), $filteroptions, $skipfilters);
+    echo "<a class=\"btn btn-primary\" href=\"$fullurl\" $extra>" . get_string('resourcedisplayopen') . '</a>';
     echo '</div>';
 
     echo $OUTPUT->footer();
