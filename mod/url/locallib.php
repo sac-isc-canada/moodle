@@ -142,6 +142,12 @@ function url_get_full_url($url, $cm, $course, $config=null) {
     // encode all & to &amp; entity
     $fullurl = str_replace('&', '&amp;', $fullurl);
 
+    // Filter without applying auto-linking filters.
+    $filtermanager = filter_manager::instance();
+    $filteroptions = ['originalformat' => FORMAT_HTML, 'noclean' => true];
+    $skipfilters = ['activitynames', 'data', 'glossary', 'sectionnames', 'bookchapters', 'urltolink'];
+    $fullurl = $filtermanager->filter_text($fullurl, context_module::instance($cm->id), $filteroptions, $skipfilters);
+
     return $fullurl;
 }
 
